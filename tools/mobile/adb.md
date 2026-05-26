@@ -38,6 +38,38 @@ Używaj tego narzędzia wtedy, gdy jego zastosowanie skraca drogę od obserwacji
 
 Naucz się komend: adb devices, adb install, adb logcat, adb shell, adb bugreport.
 
+## ADB Cheat Sheet
+
+```bash
+# Urządzenia
+adb devices                              # lista podłączonych urządzeń
+
+# Logi
+adb logcat                               # logi na żywo
+adb logcat -s "TAG"                      # tylko wybrany tag
+adb logcat *:E                           # tylko błędy (Error level)
+adb logcat > bug_log.txt                 # zapis do pliku
+
+# Nagrywanie ekranu
+adb shell screenrecord /sdcard/bug.mp4   # nagraj (max 3 min)
+adb pull /sdcard/bug.mp4 .               # pobierz na komputer
+
+# Zrzut ekranu
+adb shell screencap /sdcard/screen.png
+adb pull /sdcard/screen.png .
+
+# Aplikacje
+adb install app-debug.apk                # instalacja APK
+adb install -r app-debug.apk             # reinstalacja (zachowaj dane)
+adb uninstall com.package.name           # odinstalowanie
+adb shell am force-stop com.package.name # wymuś zamknięcie
+
+# Informacje o urządzeniu
+adb shell getprop ro.build.version.sdk   # wersja API Android
+adb shell getprop ro.product.model       # model urządzenia
+adb bugreport bugreport.zip              # pełny raport diagnostyczny
+```
+
 ## Ryzyka i ograniczenia
 
 - Nie traktuj narzędzia jako celu samego w sobie.
