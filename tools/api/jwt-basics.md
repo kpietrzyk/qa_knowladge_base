@@ -16,6 +16,10 @@ JWT (JSON Web Token) to standard tokenu używanego do autoryzacji w API. Po zalo
 
 **Dekodujesz JWT na jwt.io** — to darmowy, bezpieczny dekoder online (token nie jest wysyłany do serwera, dekodowanie jest lokalne).
 
+## Kiedy używać
+
+Używaj wiedzy o JWT zawsze, gdy aplikacja używa tokenów autoryzacyjnych i widzisz błędy 401/403, gdy chcesz sprawdzić czy token jest poprawny, wygasł lub zawiera złe uprawnienia. Kluczowe przy testowaniu API mobilnych i paneli admina.
+
 ## Anatomia JWT
 
 JWT wygląda tak:

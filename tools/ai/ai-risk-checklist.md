@@ -1,5 +1,19 @@
 # AI Risk Checklist dla QA
 
+## Kategoria
+
+- Główna kategoria: `ai-for-testing`
+- Podkategoria: `ai-safety`
+- Darmowe: `True`
+- Poziom trudności: `easy`
+- Wartość dla manualnego testera: `very high`
+- Wartość dla automatyzacji: `high`
+- Wymaga kodowania: `False`
+
+## Do czego służy
+
+Checklista ryzyk przy używaniu AI w pracy testera QA — zapobiega bezmyślnemu kopiowaniu outputu AI, chroni dane firmowe i zapewnia weryfikację generowanych artefaktów.
+
 ## Dlaczego potrzebujesz tej checklisty
 
 AI jest narzędziem — jak każde narzędzie może być używane dobrze lub źle. Tester, który bezmyślnie kopiuje output AI, jest gorszy niż tester nieużywający AI wcale.
@@ -88,4 +102,25 @@ Każdy wygenerowany test case, każdy skrypt automatyzacji i każda analiza buga
 4. Ty weryfikujesz każdy element
 5. Ty modyfikujesz, uzupełniasz, priorytetyzujesz
 6. Output jest Twój — nie AI
+```
+
+## Kiedy używać
+
+Używaj tej checklisty zawsze, gdy korzystasz z AI w procesie testowania — zarówno do generowania TC, analizy logów, jak i pisania skryptów automatyzacji. Szczególnie ważna przy pracy z danymi firmowymi i kodem produkcyjnym.
+
+## Link
+
+https://github.com/kpietrzyk/qa_knowladge_base/blob/main/tools/ai/ai-risk-checklist.md
+
+## Prompt AI do samej siebie
+
+```text
+Sprawdź mój output AI pod kątem ryzyk z tej checklisty:
+1. Czy wygenerowane TC są realistyczne dla tej aplikacji?
+2. Czy AI nie wymyśliło funkcji której nie ma w specyfikacji?
+3. Czy edge cases są specyficzne dla mobile, czy generyczne?
+4. Co powinienem dodać lub zmienić?
+
+Output AI: [WKLEJ]
+Specyfikacja / User Story: [WKLEJ]
 ```

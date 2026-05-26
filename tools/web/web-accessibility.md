@@ -16,6 +16,10 @@ Testowanie dostępności (a11y) sprawdza czy aplikacja webowa jest użyteczna dl
 
 Ten plik to przegląd podejścia i zestawu narzędzi — nie jedno narzędzie.
 
+## Kiedy używać
+
+Używaj narzędzi dostępności przy każdym nowym ekranie lub komponencie UI — szczególnie przed releasem i przy testowaniu zmian w formularzach, nawigacji i komponentach interaktywnych. Traktuj a11y jako stałą część checklisty, nie jednorazowy audit.
+
 ## Dlaczego tester powinien to umieć
 
 - Coraz więcej firm wymaga testów dostępności w DoD

@@ -55,6 +55,32 @@ Naucz się generować "złe" JSONy za pomocą AI (patrz: prompty/api-testing-pro
 - Android 7+ blokuje user certs domyślnie — wymaga debug build z `network_security_config.xml`.
 - Nie wklejaj przechwyconego ruchu (tokenów, danych użytkowników) do publicznych narzędzi AI.
 
+## Jak przygotować dane dla LLM
+
+Gdy chcesz, aby AI pomogło Ci przeanalizować ruch lub wygenerować złe JSONy:
+
+```text
+Mam poniższy request i response z Proxymana. Pomóż mi:
+1. Ocenić, czy błąd jest po stronie Frontend czy Backend
+2. Wygenerować 3 zepsute wersje tego JSON do testowania przez Map Local
+   (złe typy, brakujące pola, wartości graniczne)
+3. Sformułować tytuł buga do Jiry
+
+Request: [KLIKNIJ PRAWYM → COPY AS CURL i wklej]
+Response: [WKLEJ BODY]
+```
+
+## Troubleshooting — najczęstsze problemy
+
+| Problem | Przyczyna | Rozwiązanie |
+|---|---|---|
+| Nie widzę HTTPS | Certyfikat niezainstalowany | Proxyman → Certificate → Install certificate on this device |
+| Android nie ufa certyfikatowi | Android 7+ blokuje user certs | Debug build z `network_security_config.xml` od dewelopera |
+| iOS nie ufa certyfikatowi | Certyfikat niezaufany | Settings → General → VPN → zaufaj + włącz w Certificate Trust Settings |
+| Telefon łączy się, ale nie przechwytuje | Różne sieci WiFi | Telefon i komputer muszą być w tej samej sieci WiFi |
+| Map Local nie podmienia | Zła reguła URL pattern | Sprawdź, czy URL w regule Map Local pasuje dokładnie |
+| Certificate pinning blokuje | Apka weryfikuje certyfikat | Tylko debug build — poproś dewelopera o wyłączenie pinning |
+
 ## Link
 
 https://proxyman.io/
